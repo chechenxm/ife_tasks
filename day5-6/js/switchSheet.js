@@ -1,5 +1,4 @@
 let btnList = document.getElementById("btnList");
-
 btnList.addEventListener("click", function(event) {
 	let target = event.target;
 	if (target.nodeName.toLocaleLowerCase() === "button") {
@@ -19,10 +18,9 @@ btnList.addEventListener("click", function(event) {
 		}
 		let linkNodes = document.getElementsByTagName("link");
 		for(let node of linkNodes){
-			console.log(node);
 			if (
-				node.getAttribute("rel") === "stylesheet" &&
-				node.getAttribute("href").indexOf("style") > -1
+				node.getAttribute("rel") === "stylesheet" 
+				&& node.getAttribute("href").indexOf("style") > -1
 			) {
 				node.setAttribute("href", fileName);
 			}

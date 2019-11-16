@@ -19,8 +19,8 @@ btnList.addEventListener("click", function(event) {
 		let linkNodes = document.getElementsByTagName("link");
 		for(let node of linkNodes){
 			if (
-				node.getAttribute("rel") === "stylesheet" 
-				&& node.getAttribute("href").indexOf("style") > -1
+				node.getAttribute("rel") === "stylesheet" &&
+				node.getAttribute("href").indexOf("style") > -1
 			) {
 				node.setAttribute("href", fileName);
 			}

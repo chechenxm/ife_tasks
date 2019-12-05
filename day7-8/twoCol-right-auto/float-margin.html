@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>float + margin 实现左自适应右固定</title>
+	</head>
+	<body>
+		<style>
+			.wrapper {
+                overflow: hidden;
+				margin-top: 50px;
+				border: 2px solid #000;
+				color: #fff;
+			}
+			.aside {
+				float: left;
+				width: 200px;
+				background-color: #f78426;
+			}
+			.main {
+                margin-left: 200px;
+				background-color: #2688f7;
+			}
+		</style>
+		<div class="wrapper">
+			<div class="aside">左 宽度固定 200px</div>
+			<div class="main">右 宽度自适应 宽度随浏览器窗口大小变化</div>
+		</div>
+	</body>
+</html>

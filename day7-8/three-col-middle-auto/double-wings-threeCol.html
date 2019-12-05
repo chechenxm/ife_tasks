@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>双飞翼布局</title>
+	</head>
+	<body>
+		<style>
+			body{
+				min-width: 550px; /*left-fullwidth + min-main-fullwidth + right-fullWidth*/
+			}
+			.container {
+				width: 100%;
+			}
+			.container .column {
+				float: left;
+			}
+			.main-wrapper {
+				width: 100%;
+			}
+			main {
+				height:600px;
+				margin-left: 200px; /* left-fullwidth */
+				margin-right: 150px; /* right-fullwidth */
+				padding-left: 10px;
+				padding-right:10px;
+				background-color: deepskyblue;
+			}
+			.left {
+				width: 180px;
+				height: 400px;
+				margin-left: -100%;
+				padding-left: 10px;
+				padding-right:10px;
+				background-color: lightcoral;
+			}
+			.right {
+				height: 700px;
+				width: 130px;
+				margin-left: -150px; /* right-fullwidth */
+				padding-left: 10px;
+				padding-right:10px;
+				background-color: lightcoral;
+			}
+			header,
+			footer {
+				height: 50px;
+				background-color: mediumslateblue;
+			}
+			footer{
+				clear: both; /* 清除浮动 */
+			}
+		</style>
+		<header>I am header</header>
+		<div class="container">
+			<div class="main-wrapper column">
+				<main>
+					主体<br>
+					双飞翼布局可使主体内容优先加载，<br> 
+					对比绝对定位：<br> 
+					对比圣杯布局：
+				</main>
+			</div>
+			<aside class="left column">左 固定 200px<br /></aside>
+			<aside class="right column">右 固定 200px<br /></aside>
+		</div>
+		<footer>I am footer</footer>
+	</body>
+</html>

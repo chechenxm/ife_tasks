@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>仿圣杯布局</title>
+	</head>
+	<body>
+		<!--实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化-->
+		<style>
+			body {
+				min-width: 550px; /* l-width + min-main-width + mid-width */
+			}
+			.container {
+				padding-left: 350px; /* l-width + mid-width */
+			}
+			.container .col {
+				position: relative;
+				float: right;
+			}
+			aside[class~="left"] {
+				left: -350px; /* l-width + mid-width */
+				top: 0;
+				width: 200px;
+				margin-right: -200px; /* l-width */
+				background-color: lightsalmon;
+			}
+			aside[class~="mid"] {
+				left: -150px; /* mid-width */
+				top: 0;
+				width: 150px;
+				margin-right: -150px; /* mid-width */
+				background-color: lightgreen;
+			}
+			main {
+				width: 100%;
+				background-color: lightblue;
+			}
+			header,
+			footer {
+				height: 50px;
+				background-color: mediumslateblue;
+			}
+			footer{
+				clear: both;
+			}
+		</style>
+		<header>I am header</header>
+		<div class="container">
+			<main class="right col">
+				主体<br />
+				I’m no designer, but looking at the layout above offends even my aesthetic sensibilities. The unpadded
+				columns are hard on the eyes and difficult to read. We need whitespace. One of the drawbacks of using
+				percentages with the One True Layout to create liquid columns that it makes padding the columns a bit
+				tricky. Percentage paddings tend to look bad at some screen widths. Fixed paddings can be added, but
+				only by cluttering the markup with a div nested inside each column. With this technique, padding isn’t a
+				problem. Padding can be added directly to the left and right columns; just adjust the width accordingly.
+				To give a 10-pixel padding to the left column in the example above, but keep it’s full width (padding +
+				width) at 200px, simply change the rule as follows:
+			</main>
+			<aside class="left col">
+				左 <br />
+				固定宽度 200px <br />
+				Percentage paddings tend to look bad at some screen widths. Fixed paddings can be added, but only by
+				cluttering the markup with a div nested inside each column. With this technique, padding isn’t a
+				problem.
+			</aside>
+			<aside class="mid col">
+				中 <br />
+				固定宽度 150px <br />
+				Padding can be added directly to the left and right columns; just adjust the width accordingly. To give
+				a 10-pixel padding to the left column in the example above, but keep it’s full width (padding + width)
+				at 200px, simply change the rule as follows:
+			</aside>
+		</div>
+		<footer>I am footer</footer>
+	</body>
+</html>

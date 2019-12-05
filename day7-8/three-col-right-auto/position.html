@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>绝对定位实现三栏布局</title>
+	</head>
+	<body>
+		<style>
+			body {
+				min-width: 550px;
+			}
+			.container {
+				position: relative;
+			}
+			aside[class~="left"] {
+                position: absolute;
+                left: 0;
+                top: 0;
+				width: 200px;
+				background-color: lightcoral;
+			}
+			aside[class~="mid"] {
+                position: absolute;
+                left: 200px;
+                top: 0;
+				width: 150px;
+				background-color: lightgreen;
+			}
+			main {
+                margin-left: 350px;
+				background-color: lightblue;
+			}
+			header,
+			footer {
+				height: 50px;
+				background-color: mediumslateblue;
+			}
+		</style>
+		<header>I am header</header>
+		<div class="container">
+			<main class="col">
+				主体 自适应<br />
+				I’m no designer, but looking at the layout above offends even my aesthetic sensibilities. The unpadded
+				将none看做是长度为0的列表。 列表中的每个阴影通过color组件（作为颜色），以及
+				x，y，blur，（合适的时候）加上spread组件（作为长度）进行合成。对于每个阴影，如果两个输入的阴影都是inset或者都不是inset，
+				那么要添加的阴影必须考虑已存在的阴影。如果任何一对输入阴影中，一个是inset，另一个不是inset，那么整个阴影列表就是不可合成的。
+				如果阴影列表有不同的长度，那么较短的列表会在尾部补上这类阴影：颜色透明，所有长度为0，inset还是非inset同较长的列表。
+			</main>
+			<aside class="left col">
+				左 绝对定位<br />
+				固定宽度 200px
+			</aside>
+			<aside class="mid col">
+				右 绝对定位<br />
+				固定宽度 150px <br />
+				Padding can be added directly to the left and right columns; just adjust the width accordingly. To give
+				a 10-pixel padding to the left column in the example above, but keep it’s full width (padding + width)
+				at 200px, simply change the rule as follows:
+			</aside>
+		</div>
+		<footer>I am footer</footer>
+	</body>
+</html>

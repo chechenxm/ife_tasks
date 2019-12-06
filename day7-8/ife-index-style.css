@@ -31,9 +31,9 @@ header {
 header .container {
 	display: flex;
 	align-items: flex-start;
-    width: 960px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+	width: 960px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 header .logo {
@@ -48,17 +48,19 @@ header .menu a {
 }
 
 .main-banner {
-	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
 	height: 300px;
 	background-color: #6b3;
 }
-
-.main-banner .banner-list {
-	position: absolute;
-	right: 120px;
-	bottom: 20px;
+.main-banner .banner-list-wrapper {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 960px;
 }
-
+.main-banner .banner-list {
+	margin-bottom: 10px;
+}
 .main-banner .banner-list li {
 	display: inline-block;
 	border: 1px solid #36631b;
@@ -112,13 +114,13 @@ header .menu a {
 	margin: 5px;
 }
 footer {
-    margin-top: 10px;
+	margin-top: 10px;
 	background-color: #333;
 	color: #fff;
 }
 .footer-container {
-    width: 960px;
-    height: 150px;
+	width: 960px;
+	height: 150px;
 	padding: 10px;
 }
 .footer-container p {

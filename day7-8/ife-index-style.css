@@ -1,3 +1,6 @@
+html{
+	font-size: 14px;
+}
 header,
 main,
 ul,
@@ -32,10 +35,9 @@ header .container {
 	display: flex;
 	align-items: flex-start;
 	width: 960px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
-
 header .logo {
 	margin-right: auto;
 }
@@ -46,82 +48,83 @@ header .menu li {
 header .menu a {
 	text-decoration: underline;
 }
-
 .main-banner {
 	display: flex;
 	flex-direction: column-reverse;
-	height: 300px;
+	height: 22rem;
 	background-color: #6b3;
 }
 .main-banner .banner-list-wrapper {
 	display: flex;
 	flex-direction: row-reverse;
 	width: 960px;
+	z-index: 10;
 }
 .main-banner .banner-list {
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 }
 .main-banner .banner-list li {
 	display: inline-block;
 	border: 1px solid #36631b;
-	padding: 3px 6px;
+	padding: .25rem .5rem;
 	background-color: #b2dd99;
 	color: #36631b;
 }
 
 .banner-list li[class~="on"] {
 	border: 1px solid #333;
-	padding-top: 15px;
+	padding-top: 1rem;
 	background-color: #e0f1d6;
 	color: #333;
 }
 .main-nav {
-	margin-top: 50px;
+	margin-top: 3.5rem;
 	border-bottom: 1px solid #ddd;
 }
-
 .main-nav ul {
-	width: 960px;
-	margin-bottom: -1px;
 	display: flex;
-	font-size: 18px;
+	width: 960px;
+	margin-bottom: -1px;	
 }
 .main-nav li a {
 	display: block;
 	color: #333;
-	padding: 10px 25px;
+	padding: 1rem 2rem;
 	border: 1px solid #ddd;
-	border-top-left-radius: 25%;
-	border-top-right-radius: 25%;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
 	background-color: #eee;
+	font-size: 1.5rem;
 }
-.main-nav li .active {
+.main-nav a.active {
 	background-color: #fff;
-	border-bottom: 1px solid #fff;
+	border-bottom-color:#fff;
 }
 .main-content {
 	width: 960px;
-	margin-top: 5px;
+	margin-top: .35rem;
 }
 .main-content .row {
 	display: flex;
-	margin-left: -5px;
+	flex-wrap: wrap;
+	margin-left: -0.35rem;
 }
 .main-content .row section {
 	flex: 1 1 auto;
 	padding: 80px;
 	border: 1px solid #ddd;
-	margin: 5px;
+	margin: .35rem;
+	white-space: nowrap;
 }
 footer {
-	margin-top: 10px;
+	margin-top: 1rem;
 	background-color: #333;
 	color: #fff;
 }
 .footer-container {
 	width: 960px;
-	height: 150px;
-	padding: 10px;
+	height: 10rem;
+	padding: 1rem;
 }
 .footer-container p {
 	text-align: center;

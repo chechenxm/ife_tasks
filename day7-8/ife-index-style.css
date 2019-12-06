@@ -108,6 +108,7 @@ header .menu a {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -0.35rem;
+	margin-right: -0.35rem;
 }
 .main-content .row section {
 	flex: 1 1 auto;

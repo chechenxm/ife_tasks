@@ -99,11 +99,11 @@ header .menu a {
 }
 .main-content {
 	width: 960px;
+	margin-top: 5px;
 }
 .main-content .row {
 	display: flex;
 	margin-left: -5px;
-	margin-top: 5px;
 }
 .main-content .row section {
 	flex: 1 1 auto;
